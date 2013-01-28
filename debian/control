@@ -1,15 +1,17 @@
 Source: wordlists
-Section: unknown
+Section: utils
 Priority: extra
 Maintainer: Devon Kearns <dookie@kali.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/wordlists.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/wordlists.git;a=summary
+Homepage: http://www.kali.org
+Vcs-Git: ssh://git@git.kali.org/packages/wordlists.git
+Vcs-Browser: http://git.kali.org/gitweb/?p=packages/wordlists.git;a=summary
 
 Package: wordlists
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Contains the rockyou wordlist
+ This package contains the rockyou.txt
+ wordlist and has an installation size
+ of 134 MB.
