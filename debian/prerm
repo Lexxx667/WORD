@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Remove the directory symlinks made by postinst
+
+if [ -e /usr/share/wordlists/dirb ]; then rm -rf /usr/share/wordlists/dirb; fi
+if [ -e /usr/share/wordlists/dirbuster ]; then rm -rf /usr/share/wordlists/dirbuster; fi
+if [ -e /usr/share/wordlists/fern-wifi ]; then rm -rf /usr/share/wordlists/fern-wifi; fi
+if [ -e /usr/share/wordlists/metasploit-jtr ]; then rm -rf /usr/share/wordlists/metasploit-jtr; fi
+if [ -e /usr/share/wordlists/metasploit ]; then rm -rf /usr/share/wordlists/metasploit; fi
+if [ -e /usr/share/wordlists/metasploit-pro ]; then rm -rf /usr/share/wordlists/metasploit-pro; fi
+if [ -e /usr/share/wordlists/webslayer ]; then rm -rf /usr/share/wordlists/webslayer; fi
+if [ -e /usr/share/wordlists/wfuzz ]; then rm -rf /usr/share/wordlists/wfuzz; fi
+
+# Remove the file symlinks made by postinst
 
 if [ -e /usr/share/wordlists/sqlmap.txt ]; then rm -rf /usr/share/wordlists/sqlmap.txt; fi
 if [ -e /usr/share/wordlists/dnsmap.txt ]; then rm -rf /usr/share/wordlists/dnsmap.txt; fi

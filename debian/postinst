@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Make symbolic links to folders containing other wordlists
+
+if [ -d /usr/share/dirb/wordlists ]; then ln -sf /usr/share/dirb/wordlists /usr/share/wordlists/dirb; fi
+if [ -d /usr/share/dirbuster/wordlists ]; then ln -sf /usr/share/dirbuster/wordlists /usr/share/wordlists/dirbuster; fi
+if [ -d /usr/share/fern-wifi-cracker/extras/wordlists ]; then ln -sf /usr/share/fern-wifi-cracker/extras/wordlists /usr/share/wordlists/fern-wifi; fi
+if [ -d /usr/share/metasploit-framework/data/john/wordlists ]; then ln -sf /usr/share/metasploit-framework/data/john/wordlists /usr/share/wordlists/metasploit-jtr; fi
+if [ -d /usr/share/metasploit-framework/data/wordlists ]; then ln -sf /usr/share/metasploit-framework/data/wordlists /usr/share/wordlists/metasploit; fi
+if [ -d /opt/metasploit/apps/pro/data/wordlists ]; then ln -sf /opt/metasploit/apps/pro/data/wordlists /usr/share/wordlists/metasploit-pro; fi
+if [ -d /usr/share/webslayer/wordlist ]; then ln -sf /usr/share/webslayer/wordlist /usr/share/wordlists/webslayer; fi
+if [ -d /usr/share/wfuzz/wordlist ]; then ln -sf /usr/share/wfuzz/wordlist /usr/share/wordlists/wfuzz; fi
+
+
+# Make symbolic links to individual files
 
 if [ -e /usr/share/sqlmap/txt/wordlist.zip ]; then unzip -o -d /usr/share/sqlmap/txt/ /usr/share/sqlmap/txt/wordlist.zip 2>0 && ln -sf /usr/share/sqlmap/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt; fi
 if [ -e /usr/share/dnsmap/wordlist_TLAs.txt ]; then ln -sf /usr/share/dnsmap/wordlist_TLAs.txt /usr/share/wordlists/dnsmap.txt; fi
