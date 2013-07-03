@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+if [ -e /usr/share/wordlists/sqlmap.txt ]; then rm -rf /usr/share/wordlists/sqlmap.txt; fi
+if [ -e /usr/share/wordlists/dnsmap.txt ]; then rm -rf /usr/share/wordlists/dnsmap.txt; fi
+if [ -e /usr/share/wordlists/wfuzz.txt ]; then rm -rf /usr/share/wordlists/wfuzz.txt; fi
+if [ -e /usr/share/wordlists/nmap.lst ]; then rm -rf /usr/share/wordlists/nmap.lst; fi
+if [ -e /usr/share/wordlists/fasttrack.txt ]; then rm -rf /usr/share/wordlists/fasttrack.txt; fi
+if [ -e /usr/share/wordlists/termineter.txt ]; then rm -rf /usr/share/wordlists/termineter.txt; fi
+if [ -e /usr/share/wordlists/w3af.txt ]; then rm -rf /usr/share/wordlists/w3af.txt; fi
+if [ -e /usr/share/wordlists/wpscan.txt ]; then rm -rf /usr/share/wordlists/wpscan.txt; fi

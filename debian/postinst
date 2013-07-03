@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+if [ -e /usr/share/sqlmap/txt/wordlist.zip ]; then unzip -o -d /usr/share/sqlmap/txt/ /usr/share/sqlmap/txt/wordlist.zip 2>0 && ln -sf /usr/share/sqlmap/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt; fi
+if [ -e /usr/share/dnsmap/wordlist_TLAs.txt ]; then ln -sf /usr/share/dnsmap/wordlist_TLAs.txt /usr/share/wordlists/dnsmap.txt; fi
+if [ -e /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt ]; then ln -sf /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt /usr/share/wordlists/wfuzz.txt; fi
+if [ -e /usr/share/nmap/nselib/data/passwords.lst ]; then ln -sf /usr/share/nmap/nselib/data/passwords.lst /usr/share/wordlists/nmap.lst; fi
+if [ -e /usr/share/set/src/fasttrack/wordlist.txt ]; then ln -sf /usr/share/set/src/fasttrack/wordlist.txt /usr/share/wordlists/fasttrack.txt; fi
+if [ -e /usr/share/termineter/framework/data/smeter_passwords.txt ]; then ln -sf /usr/share/termineter/framework/data/smeter_passwords.txt /usr/share/wordlists/termineter.txt; fi
+if [ -e /usr/share/w3af/core/controllers/bruteforce/passwords.txt ]; then ln -sf /usr/share/w3af/core/controllers/bruteforce/passwords.txt /usr/share/wordlists/w3af.txt; fi
+if [ -e /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt ]; then ln -sf /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt /usr/share/wordlists/wpscan.txt; fi

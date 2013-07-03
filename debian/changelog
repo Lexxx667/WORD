@@ -1,3 +1,9 @@
+wordlists (0.3-1kali1) kali; urgency=low
+
+  * Added postinst and prerm scripts to make links to other wordlists
+
+ -- Devon Kearns <dookie@kali.org>  Wed, 03 Jul 2013 13:52:49 -0600
+
 wordlists (0.3-1kali0) kali; urgency=low
 
   * Imported new version
