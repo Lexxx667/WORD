@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Kali Developers <devel@kali.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
-Homepage: http://www.kali.org
+Homepage: https://www.kali.org
 Vcs-Git: https://gitlab.com/kalilinux/packages/wordlists.git
 Vcs-Browser: https://gitlab.com/kalilinux/packages/wordlists
 

@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: wordlists
-Source: http://www.kali.org
+Source: https://www.kali.org
 
 Files: *
 Copyright: Kali Linux <info@kali.org>
