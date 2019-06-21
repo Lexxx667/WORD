@@ -10,6 +10,7 @@ if [ -e /usr/share/wordlists/metasploit ]; then rm -rf /usr/share/wordlists/meta
 if [ -e /usr/share/wordlists/metasploit-pro ]; then rm -rf /usr/share/wordlists/metasploit-pro; fi
 if [ -e /usr/share/wordlists/webslayer ]; then rm -rf /usr/share/wordlists/webslayer; fi
 if [ -e /usr/share/wordlists/wfuzz ]; then rm -rf /usr/share/wordlists/wfuzz; fi
+if [ -e /usr/share/wordlists/seclists ]; then rm -rf /usr/share/wordlists/seclists; fi
 
 # Remove the file symlinks made by postinst
 

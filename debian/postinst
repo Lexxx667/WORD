@@ -10,6 +10,7 @@ if [ -d /usr/share/metasploit-framework/data/wordlists ]; then ln -sf /usr/share
 if [ -d /opt/metasploit/apps/pro/data/wordlists ]; then ln -sf /opt/metasploit/apps/pro/data/wordlists /usr/share/wordlists/metasploit-pro; fi
 if [ -d /usr/share/webslayer/wordlist ]; then ln -sf /usr/share/webslayer/wordlist /usr/share/wordlists/webslayer; fi
 if [ -d /usr/share/wfuzz/wordlist ]; then ln -sf /usr/share/wfuzz/wordlist /usr/share/wordlists/wfuzz; fi
+if [ -d /usr/share/seclists ]; then ln -sf /usr/share/seclists /usr/share/wordlists/seclists; fi
 
 
 # Make symbolic links to individual files
