@@ -1,24 +1,60 @@
-#!/bin/bash
+#!/bin/sh
 
-# Remove the directory symlinks made by postinst
 
-if [ -e /usr/share/wordlists/dirb ]; then rm -rf /usr/share/wordlists/dirb; fi
-if [ -e /usr/share/wordlists/dirbuster ]; then rm -rf /usr/share/wordlists/dirbuster; fi
-if [ -e /usr/share/wordlists/fern-wifi ]; then rm -rf /usr/share/wordlists/fern-wifi; fi
-if [ -e /usr/share/wordlists/metasploit-jtr ]; then rm -rf /usr/share/wordlists/metasploit-jtr; fi
-if [ -e /usr/share/wordlists/metasploit ]; then rm -rf /usr/share/wordlists/metasploit; fi
-if [ -e /usr/share/wordlists/metasploit-pro ]; then rm -rf /usr/share/wordlists/metasploit-pro; fi
-if [ -e /usr/share/wordlists/webslayer ]; then rm -rf /usr/share/wordlists/webslayer; fi
-if [ -e /usr/share/wordlists/wfuzz ]; then rm -rf /usr/share/wordlists/wfuzz; fi
-if [ -e /usr/share/wordlists/seclists ]; then rm -rf /usr/share/wordlists/seclists; fi
+## Quit if anything goes wrong
+set -e
 
-# Remove the file symlinks made by postinst
 
-if [ -e /usr/share/wordlists/sqlmap.txt ]; then rm -rf /usr/share/wordlists/sqlmap.txt; fi
-if [ -e /usr/share/wordlists/dnsmap.txt ]; then rm -rf /usr/share/wordlists/dnsmap.txt; fi
-if [ -e /usr/share/wordlists/wfuzz.txt ]; then rm -rf /usr/share/wordlists/wfuzz.txt; fi
-if [ -e /usr/share/wordlists/nmap.lst ]; then rm -rf /usr/share/wordlists/nmap.lst; fi
-if [ -e /usr/share/wordlists/fasttrack.txt ]; then rm -rf /usr/share/wordlists/fasttrack.txt; fi
-if [ -e /usr/share/wordlists/termineter.txt ]; then rm -rf /usr/share/wordlists/termineter.txt; fi
-if [ -e /usr/share/wordlists/w3af.txt ]; then rm -rf /usr/share/wordlists/w3af.txt; fi
-if [ -e /usr/share/wordlists/wpscan.txt ]; then rm -rf /usr/share/wordlists/wpscan.txt; fi
+## Remove the directory symlinks made by postinst
+[ -h /usr/share/wordlists/dirb ] \
+  && rm -f /usr/share/wordlists/dirb
+
+[ -h /usr/share/wordlists/dirbuster ] \
+  && rm -f /usr/share/wordlists/dirbuster
+
+[ -h /usr/share/wordlists/fern-wifi ] \
+  && rm -f /usr/share/wordlists/fern-wifi
+
+[ -h /usr/share/wordlists/metasploit-jtr ] \
+  && rm -f /usr/share/wordlists/metasploit-jtr
+
+[ -h /usr/share/wordlists/metasploit ] \
+  && rm -f /usr/share/wordlists/metasploit
+
+[ -h /usr/share/wordlists/metasploit-pro ] \
+  && rm -f /usr/share/wordlists/metasploit-pro
+
+[ -h /usr/share/wordlists/webslayer ] \
+  && rm -f /usr/share/wordlists/webslayer
+
+[ -h /usr/share/wordlists/wfuzz ] \
+  && rm -f /usr/share/wordlists/wfuzz
+
+[ -h /usr/share/wordlists/seclists ] \
+  && rm -f /usr/share/wordlists/seclists
+
+
+## Remove the file symlinks made by postinst
+[ -h /usr/share/wordlists/sqlmap.txt ] \
+  && rm -f /usr/share/wordlists/sqlmap.txt
+
+[ -h /usr/share/wordlists/dnsmap.txt ] \
+  && rm -f /usr/share/wordlists/dnsmap.txt
+
+[ -h /usr/share/wordlists/wfuzz.txt ] \
+  && rm -f /usr/share/wordlists/wfuzz.txt
+
+[ -h /usr/share/wordlists/nmap.lst ] \
+  && rm -f /usr/share/wordlists/nmap.lst
+
+[ -h /usr/share/wordlists/fasttrack.txt ] \
+  && rm -f /usr/share/wordlists/fasttrack.txt
+
+[ -h /usr/share/wordlists/termineter.txt ] \
+  && rm -f /usr/share/wordlists/termineter.txt
+
+[ -h /usr/share/wordlists/w3af.txt ] \
+  && rm -f /usr/share/wordlists/w3af.txt
+
+[ -h /usr/share/wordlists/wpscan.txt ] \
+  && rm -f /usr/share/wordlists/wpscan.txt

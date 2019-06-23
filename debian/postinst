@@ -1,25 +1,61 @@
-#!/bin/bash
+#!/bin/sh
 
-# Make symbolic links to folders containing other wordlists
 
-if [ -d /usr/share/dirb/wordlists ]; then ln -sf /usr/share/dirb/wordlists /usr/share/wordlists/dirb; fi
-if [ -d /usr/share/dirbuster/wordlists ]; then ln -sf /usr/share/dirbuster/wordlists /usr/share/wordlists/dirbuster; fi
-if [ -d /usr/share/fern-wifi-cracker/extras/wordlists ]; then ln -sf /usr/share/fern-wifi-cracker/extras/wordlists /usr/share/wordlists/fern-wifi; fi
-if [ -d /usr/share/metasploit-framework/data/john/wordlists ]; then ln -sf /usr/share/metasploit-framework/data/john/wordlists /usr/share/wordlists/metasploit-jtr; fi
-if [ -d /usr/share/metasploit-framework/data/wordlists ]; then ln -sf /usr/share/metasploit-framework/data/wordlists /usr/share/wordlists/metasploit; fi
-if [ -d /opt/metasploit/apps/pro/data/wordlists ]; then ln -sf /opt/metasploit/apps/pro/data/wordlists /usr/share/wordlists/metasploit-pro; fi
-if [ -d /usr/share/webslayer/wordlist ]; then ln -sf /usr/share/webslayer/wordlist /usr/share/wordlists/webslayer; fi
-if [ -d /usr/share/wfuzz/wordlist ]; then ln -sf /usr/share/wfuzz/wordlist /usr/share/wordlists/wfuzz; fi
-if [ -d /usr/share/seclists ]; then ln -sf /usr/share/seclists /usr/share/wordlists/seclists; fi
+## Quit if anything goes wrong
+set -e
+
+
+## Make symbolic links to folders containing other wordlists
+[ -d /usr/share/dirb/wordlists ] \
+  && ln -sf /usr/share/dirb/wordlists /usr/share/wordlists/dirb
+
+[ -d /usr/share/dirbuster/wordlists ] \
+  && ln -sf /usr/share/dirbuster/wordlists /usr/share/wordlists/dirbuster
+
+[ -d /usr/share/fern-wifi-cracker/extras/wordlists ] \
+  && ln -sf /usr/share/fern-wifi-cracker/extras/wordlists /usr/share/wordlists/fern-wifi
+
+[ -d /usr/share/metasploit-framework/data/john/wordlists ] \
+  && ln -sf /usr/share/metasploit-framework/data/john/wordlists /usr/share/wordlists/metasploit-jtr
+
+[ -d /usr/share/metasploit-framework/data/wordlists ] \
+  && ln -sf /usr/share/metasploit-framework/data/wordlists /usr/share/wordlists/metasploit
+
+[ -d /opt/metasploit/apps/pro/data/wordlists ] \
+  && ln -sf /opt/metasploit/apps/pro/data/wordlists /usr/share/wordlists/metasploit-pro
+
+[ -d /usr/share/webslayer/wordlist ] \
+  && ln -sf /usr/share/webslayer/wordlist /usr/share/wordlists/webslayer
+
+[ -d /usr/share/wfuzz/wordlist ] \
+  && ln -sf /usr/share/wfuzz/wordlist /usr/share/wordlists/wfuzz
+
+[ -d /usr/share/seclists ] \
+  && ln -sf /usr/share/seclists /usr/share/wordlists/seclists
 
 
 # Make symbolic links to individual files
+[ -e /usr/share/sqlmap/txt/wordlist.zip ] \
+  && unzip -o -d /usr/share/sqlmap/txt/ /usr/share/sqlmap/txt/wordlist.zip 2>0 \
+  && ln -sf /usr/share/sqlmap/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt
 
-if [ -e /usr/share/sqlmap/txt/wordlist.zip ]; then unzip -o -d /usr/share/sqlmap/txt/ /usr/share/sqlmap/txt/wordlist.zip 2>0 && ln -sf /usr/share/sqlmap/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt; fi
-if [ -e /usr/share/dnsmap/wordlist_TLAs.txt ]; then ln -sf /usr/share/dnsmap/wordlist_TLAs.txt /usr/share/wordlists/dnsmap.txt; fi
-if [ -e /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt ]; then ln -sf /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt /usr/share/wordlists/wfuzz.txt; fi
-if [ -e /usr/share/nmap/nselib/data/passwords.lst ]; then ln -sf /usr/share/nmap/nselib/data/passwords.lst /usr/share/wordlists/nmap.lst; fi
-if [ -e /usr/share/set/src/fasttrack/wordlist.txt ]; then ln -sf /usr/share/set/src/fasttrack/wordlist.txt /usr/share/wordlists/fasttrack.txt; fi
-if [ -e /usr/share/termineter/framework/data/smeter_passwords.txt ]; then ln -sf /usr/share/termineter/framework/data/smeter_passwords.txt /usr/share/wordlists/termineter.txt; fi
-if [ -e /usr/share/w3af/core/controllers/bruteforce/passwords.txt ]; then ln -sf /usr/share/w3af/core/controllers/bruteforce/passwords.txt /usr/share/wordlists/w3af.txt; fi
-if [ -e /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt ]; then ln -sf /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt /usr/share/wordlists/wpscan.txt; fi
+[ -e /usr/share/dnsmap/wordlist_TLAs.txt ] \
+  && ln -sf /usr/share/dnsmap/wordlist_TLAs.txt /usr/share/wordlists/dnsmap.txt
+
+[ -e /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt ] \
+  && ln -sf /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt /usr/share/wordlists/wfuzz.txt
+
+[ -e /usr/share/nmap/nselib/data/passwords.lst ] \
+  && ln -sf /usr/share/nmap/nselib/data/passwords.lst /usr/share/wordlists/nmap.lst
+
+[ -e /usr/share/set/src/fasttrack/wordlist.txt ] \
+  && ln -sf /usr/share/set/src/fasttrack/wordlist.txt /usr/share/wordlists/fasttrack.txt
+
+[ -e /usr/share/termineter/framework/data/smeter_passwords.txt ] \
+  && ln -sf /usr/share/termineter/framework/data/smeter_passwords.txt /usr/share/wordlists/termineter.txt
+
+[ -e /usr/share/w3af/core/controllers/bruteforce/passwords.txt ] \
+  && ln -sf /usr/share/w3af/core/controllers/bruteforce/passwords.txt /usr/share/wordlists/w3af.txt
+
+[ -e /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt ] \
+  && ln -sf /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt /usr/share/wordlists/wpscan.txt
