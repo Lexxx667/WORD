@@ -1,10 +1,5 @@
 #!/bin/sh
 
-
-## Quit if anything goes wrong
-set -e
-
-
 ## Make symbolic links to folders containing other wordlists
 [ -d /usr/share/dirb/wordlists ] \
   && ln -sf /usr/share/dirb/wordlists /usr/share/wordlists/dirb
@@ -59,3 +54,5 @@ set -e
 
 [ -e /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt ] \
   && ln -sf /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt /usr/share/wordlists/wpscan.txt
+
+exit 0

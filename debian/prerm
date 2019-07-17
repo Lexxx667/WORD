@@ -1,10 +1,5 @@
 #!/bin/sh
 
-
-## Quit if anything goes wrong
-set -e
-
-
 ## Remove the directory symlinks made by postinst
 [ -h /usr/share/wordlists/dirb ] \
   && rm -f /usr/share/wordlists/dirb
@@ -58,3 +53,5 @@ set -e
 
 [ -h /usr/share/wordlists/wpscan.txt ] \
   && rm -f /usr/share/wordlists/wpscan.txt
+
+exit 0
