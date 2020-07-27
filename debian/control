@@ -1,6 +1,6 @@
 Source: wordlists
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Kali Developers <devel@kali.org>
 Uploaders: Ben Wilson <g0tmi1k@kali.org>
 Build-Depends: debhelper-compat (= 12)
