@@ -3,7 +3,7 @@ Section: utils
 Priority: extra
 Maintainer: Kali Developers <devel@kali.org>
 Uploaders: Ben Wilson <g0tmi1k@kali.org>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 12~)
 Standards-Version: 3.9.3
 Homepage: https://www.kali.org
 Vcs-Git: https://gitlab.com/kalilinux/packages/wordlists.git
