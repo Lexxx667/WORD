@@ -31,6 +31,6 @@ wordlists (0.2-1kali0) kali; urgency=low
 
 wordlists (0.1-1kali0) kali; urgency=low
 
-  * Initial release 
+  * Initial release
 
  -- Devon Kearns <dookie@kali.org>  Mon, 28 Jan 2013 13:16:48 -0700
