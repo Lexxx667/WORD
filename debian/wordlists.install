@@ -1,2 +1,2 @@
 debian/helper-script/* usr/bin/
-rockyou.txt.gz usr/share/wordlists/
+rockyou.txt.xz usr/share/wordlists/
