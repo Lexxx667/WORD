@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Kali Developers <devel@kali.org>
 Uploaders: Ben Wilson <g0tmi1k@kali.org>
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.6.0
 Homepage: https://www.kali.org
 Vcs-Git: https://gitlab.com/kalilinux/packages/wordlists.git
