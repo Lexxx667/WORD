@@ -1,3 +1,32 @@
+wordlists (2022.3.0) kali-dev; urgency=medium
+
+  [ Kali Janitor ]
+  * Trim trailing whitespace
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 8 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+
+  [ Ben Wilson ]
+  * Add uploaders
+  * New helper-script format
+  * Remove template comment and switch spaces to tabs
+
+  [ Daniel Ruiz de Alegría ]
+  * Configure helper-script to extract rockyou.txt.gz
+  * Remove extracted rockyou.txt in prerm
+  * Remove old wordlists and add missing ones
+
+  [ Raphaël Hertzog ]
+  * Add GitLab's CI configuration file
+  * Configure git-buildpackage for Kali
+  * Update URL in GitLab's CI configuration file
+  * Bump Standards-Version to 4.6.0
+  * Switch to debhelper compat level 13
+  * Switch to native source package
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Mon, 23 May 2022 20:12:05 +0200
+
 wordlists (0.3-1kali3) kali-dev; urgency=medium
 
   * Add dependents to kali-defaults
