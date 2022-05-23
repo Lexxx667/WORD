@@ -10,17 +10,11 @@
 [ -d /usr/share/fern-wifi-cracker/extras/wordlists ] \
   && ln -sf /usr/share/fern-wifi-cracker/extras/wordlists /usr/share/wordlists/fern-wifi
 
-[ -d /usr/share/metasploit-framework/data/john/wordlists ] \
-  && ln -sf /usr/share/metasploit-framework/data/john/wordlists /usr/share/wordlists/metasploit-jtr
-
 [ -d /usr/share/metasploit-framework/data/wordlists ] \
   && ln -sf /usr/share/metasploit-framework/data/wordlists /usr/share/wordlists/metasploit
 
 [ -d /opt/metasploit/apps/pro/data/wordlists ] \
   && ln -sf /opt/metasploit/apps/pro/data/wordlists /usr/share/wordlists/metasploit-pro
-
-[ -d /usr/share/webslayer/wordlist ] \
-  && ln -sf /usr/share/webslayer/wordlist /usr/share/wordlists/webslayer
 
 [ -d /usr/share/wfuzz/wordlist ] \
   && ln -sf /usr/share/wfuzz/wordlist /usr/share/wordlists/wfuzz
@@ -28,17 +22,23 @@
 [ -d /usr/share/seclists ] \
   && ln -sf /usr/share/seclists /usr/share/wordlists/seclists
 
+[ -d /usr/share/legion/wordlists ] \
+  && ln -sf /usr/share/legion/wordlists /usr/share/wordlists/legion
+
+[ -d /usr/share/amass/wordlists ] \
+  && ln -sf /usr/share/amass/wordlists /usr/share/wordlists/amass
+
+[ -d /usr/share/brutespray/wordlist ] \
+  && ln -sf /usr/share/brutespray/wordlist /usr/share/wordlists/brutespray
+
 
 # Make symbolic links to individual files
-[ -e /usr/share/sqlmap/txt/wordlist.zip ] \
-  && unzip -o -d /usr/share/sqlmap/txt/ /usr/share/sqlmap/txt/wordlist.zip 2>0 \
-  && ln -sf /usr/share/sqlmap/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt
+[ -e /usr/share/sqlmap/data/txt/wordlist.tx_ ] \
+  && unzip -o -d /usr/share/sqlmap/data/txt/ /usr/share/sqlmap/data/txt/wordlist.tx_ 2>0 \
+  && ln -sf /usr/share/sqlmap/data/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt
 
 [ -e /usr/share/dnsmap/wordlist_TLAs.txt ] \
   && ln -sf /usr/share/dnsmap/wordlist_TLAs.txt /usr/share/wordlists/dnsmap.txt
-
-[ -e /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt ] \
-  && ln -sf /usr/share/golismero/wordlist/wfuzz/Discovery/all.txt /usr/share/wordlists/wfuzz.txt
 
 [ -e /usr/share/nmap/nselib/data/passwords.lst ] \
   && ln -sf /usr/share/nmap/nselib/data/passwords.lst /usr/share/wordlists/nmap.lst
@@ -46,13 +46,10 @@
 [ -e /usr/share/set/src/fasttrack/wordlist.txt ] \
   && ln -sf /usr/share/set/src/fasttrack/wordlist.txt /usr/share/wordlists/fasttrack.txt
 
-[ -e /usr/share/termineter/framework/data/smeter_passwords.txt ] \
-  && ln -sf /usr/share/termineter/framework/data/smeter_passwords.txt /usr/share/wordlists/termineter.txt
+[ -e /usr/share/john/password.lst ] \
+  && ln -sf /usr/share/john/password.lst /usr/share/wordlists/john.lst
 
-[ -e /usr/share/w3af/core/controllers/bruteforce/passwords.txt ] \
-  && ln -sf /usr/share/w3af/core/controllers/bruteforce/passwords.txt /usr/share/wordlists/w3af.txt
-
-[ -e /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt ] \
-  && ln -sf /usr/share/wpscan/spec/fixtures/wpscan/modules/bruteforce/wordlist.txt /usr/share/wordlists/wpscan.txt
+[ -e /usr/share/dict/wordlist-probable.txt ] \
+  && ln -sf /usr/share/dict/wordlist-probable.txt /usr/share/wordlists/wifite.txt
 
 exit 0

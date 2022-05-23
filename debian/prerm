@@ -10,17 +10,11 @@
 [ -h /usr/share/wordlists/fern-wifi ] \
   && rm -f /usr/share/wordlists/fern-wifi
 
-[ -h /usr/share/wordlists/metasploit-jtr ] \
-  && rm -f /usr/share/wordlists/metasploit-jtr
-
 [ -h /usr/share/wordlists/metasploit ] \
   && rm -f /usr/share/wordlists/metasploit
 
 [ -h /usr/share/wordlists/metasploit-pro ] \
   && rm -f /usr/share/wordlists/metasploit-pro
-
-[ -h /usr/share/wordlists/webslayer ] \
-  && rm -f /usr/share/wordlists/webslayer
 
 [ -h /usr/share/wordlists/wfuzz ] \
   && rm -f /usr/share/wordlists/wfuzz
@@ -28,6 +22,15 @@
 [ -h /usr/share/wordlists/seclists ] \
   && rm -f /usr/share/wordlists/seclists
 
+[ -h /usr/share/wordlists/legion ] \
+  && rm -f /usr/share/wordlists/legion
+
+[ -h /usr/share/wordlists/amass ] \
+  && rm -f /usr/share/wordlists/amass
+
+[ -h /usr/share/wordlists/brutespray ] \
+  && rm -f /usr/share/wordlists/brutespray
+  
 
 ## Remove the file symlinks made by postinst
 [ -h /usr/share/wordlists/sqlmap.txt ] \
@@ -36,23 +39,17 @@
 [ -h /usr/share/wordlists/dnsmap.txt ] \
   && rm -f /usr/share/wordlists/dnsmap.txt
 
-[ -h /usr/share/wordlists/wfuzz.txt ] \
-  && rm -f /usr/share/wordlists/wfuzz.txt
-
 [ -h /usr/share/wordlists/nmap.lst ] \
   && rm -f /usr/share/wordlists/nmap.lst
 
 [ -h /usr/share/wordlists/fasttrack.txt ] \
   && rm -f /usr/share/wordlists/fasttrack.txt
 
-[ -h /usr/share/wordlists/termineter.txt ] \
-  && rm -f /usr/share/wordlists/termineter.txt
+[ -h /usr/share/wordlists/john.lst ] \
+  && rm -f /usr/share/wordlists/john.lst
 
-[ -h /usr/share/wordlists/w3af.txt ] \
-  && rm -f /usr/share/wordlists/w3af.txt
-
-[ -h /usr/share/wordlists/wpscan.txt ] \
-  && rm -f /usr/share/wordlists/wpscan.txt
+[ -h /usr/share/wordlists/wifite.txt ] \
+  && rm -f /usr/share/wordlists/wifite.txt
 
 # Remove extracted rockyou.txt
 [ -f /usr/share/wordlists/rockyou.txt ] \
