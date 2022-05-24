@@ -52,7 +52,7 @@
   && rm -f /usr/share/wordlists/wifite.txt
 
 # Remove extracted rockyou.txt
-[ -f /usr/share/wordlists/rockyou.txt ] \
+[ "$1" = "remove" ] \
   && rm -f /usr/share/wordlists/rockyou.txt
 
 exit 0
