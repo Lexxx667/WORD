@@ -1,3 +1,9 @@
+wordlists (2022.3.1) kali-dev; urgency=medium
+
+  * Clean extracted rockyou.txt only on remove
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Tue, 31 May 2022 10:31:18 +0200
+
 wordlists (2022.3.0) kali-dev; urgency=medium
 
   [ Kali Janitor ]
