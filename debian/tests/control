@@ -1,0 +1,9 @@
+# Run it and extract the rockyou
+Test-Command: echo y | wordlists
+Depends: @, gzip, kali-defaults, sudo
+Restrictions: superficial, allow-stderr, needs-root
+
+# Run it without extracting
+Test-Command: echo n | wordlists
+Depends: @, kali-defaults
+Restrictions: superficial, allow-stderr
