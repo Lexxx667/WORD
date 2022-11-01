@@ -10,7 +10,6 @@ Standards-Version: 4.6.0
 Homepage: https://www.kali.org
 Vcs-Git: https://gitlab.com/kalilinux/packages/wordlists.git
 Vcs-Browser: https://gitlab.com/kalilinux/packages/wordlists
-Testsuite: autopkgtest
 
 Package: wordlists
 Architecture: all
