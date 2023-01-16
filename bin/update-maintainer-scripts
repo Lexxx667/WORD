@@ -1,0 +1,16 @@
+#!/bin/sh
+
+update_script() {
+  local script=$1
+  {
+    sed -n -e '1,/^WORDLIST_SYMLINKS="/ p' $script
+    cat wordlist-symlinks
+    sed -n -e '/^" # END WORDLIST_SYMLINKS/,$ p' $script
+  } > $script.new
+  mv $script.new $script
+}
+
+update_script debian/wordlists.postinst
+update_script debian/wordlists.prerm
+
+cut -d ':' -f 1 < wordlist-symlinks | sed 's/^/interest-noawait /' > debian/wordlists.triggers

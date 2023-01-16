@@ -1,0 +1,16 @@
+/opt/metasploit/apps/pro/data/wordlists:metasploit-pro
+/usr/share/amass/wordlists:amass
+/usr/share/brutespray/wordlist:brutespray
+/usr/share/dict/wordlist-probable.txt:wifite.txt
+/usr/share/dirbuster/wordlists:dirbuster
+/usr/share/dirb/wordlists:dirb
+/usr/share/dnsmap/wordlist_TLAs.txt:dnsmap.txt
+/usr/share/fern-wifi-cracker/extras/wordlists:fern-wifi
+/usr/share/john/password.lst:john.lst
+/usr/share/legion/wordlists:legion
+/usr/share/metasploit-framework/data/wordlists:metasploit
+/usr/share/nmap/nselib/data/passwords.lst:nmap.lst
+/usr/share/seclists:seclists
+/usr/share/set/src/fasttrack/wordlist.txt:fasttrack.txt
+/usr/share/wfuzz/wordlist:wfuzz
+/usr/share/sqlmap/data/txt/wordlist.tx_:

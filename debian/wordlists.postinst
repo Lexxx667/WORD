@@ -1,0 +1,41 @@
+#!/bin/sh
+
+WORDLIST_SYMLINKS="
+/opt/metasploit/apps/pro/data/wordlists:metasploit-pro
+/usr/share/amass/wordlists:amass
+/usr/share/brutespray/wordlist:brutespray
+/usr/share/dict/wordlist-probable.txt:wifite.txt
+/usr/share/dirbuster/wordlists:dirbuster
+/usr/share/dirb/wordlists:dirb
+/usr/share/dnsmap/wordlist_TLAs.txt:dnsmap.txt
+/usr/share/fern-wifi-cracker/extras/wordlists:fern-wifi
+/usr/share/john/password.lst:john.lst
+/usr/share/legion/wordlists:legion
+/usr/share/metasploit-framework/data/wordlists:metasploit
+/usr/share/nmap/nselib/data/passwords.lst:nmap.lst
+/usr/share/seclists:seclists
+/usr/share/set/src/fasttrack/wordlist.txt:fasttrack.txt
+/usr/share/wfuzz/wordlist:wfuzz
+/usr/share/sqlmap/data/txt/wordlist.tx_:
+" # END WORDLIST_SYMLINKS
+
+## Make symbolic links to folders containing other wordlists
+for symlink in $WORDLIST_SYMLINKS; do
+  file="$(echo "$symlink" | cut -d ':' -f 1)"
+  link="$(echo "$symlink" | cut -d ':' -f 2)"
+  if [ "${link}" != "" ]; then
+    link="/usr/share/wordlists/${link}"
+    rm -f "${link}"
+    [ -e "${file}" ] \
+      && ln -sf "${file}" "${link}"
+  fi
+done
+
+
+[ -e /usr/share/sqlmap/data/txt/wordlist.tx_ ] \
+  && unzip -o -d /usr/share/sqlmap/data/txt/ /usr/share/sqlmap/data/txt/wordlist.tx_ 2>0 \
+  && ln -sf /usr/share/sqlmap/data/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt
+
+exit 0
+
+#DEBHELPER#

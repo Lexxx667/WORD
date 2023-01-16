@@ -1,1 +1,16 @@
-interest-noawait /usr/share
+interest-noawait /opt/metasploit/apps/pro/data/wordlists
+interest-noawait /usr/share/amass/wordlists
+interest-noawait /usr/share/brutespray/wordlist
+interest-noawait /usr/share/dict/wordlist-probable.txt
+interest-noawait /usr/share/dirbuster/wordlists
+interest-noawait /usr/share/dirb/wordlists
+interest-noawait /usr/share/dnsmap/wordlist_TLAs.txt
+interest-noawait /usr/share/fern-wifi-cracker/extras/wordlists
+interest-noawait /usr/share/john/password.lst
+interest-noawait /usr/share/legion/wordlists
+interest-noawait /usr/share/metasploit-framework/data/wordlists
+interest-noawait /usr/share/nmap/nselib/data/passwords.lst
+interest-noawait /usr/share/seclists
+interest-noawait /usr/share/set/src/fasttrack/wordlist.txt
+interest-noawait /usr/share/wfuzz/wordlist
+interest-noawait /usr/share/sqlmap/data/txt/wordlist.tx_

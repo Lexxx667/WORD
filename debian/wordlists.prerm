@@ -1,0 +1,41 @@
+#!/bin/sh
+
+WORDLIST_SYMLINKS="
+/opt/metasploit/apps/pro/data/wordlists:metasploit-pro
+/usr/share/amass/wordlists:amass
+/usr/share/brutespray/wordlist:brutespray
+/usr/share/dict/wordlist-probable.txt:wifite.txt
+/usr/share/dirbuster/wordlists:dirbuster
+/usr/share/dirb/wordlists:dirb
+/usr/share/dnsmap/wordlist_TLAs.txt:dnsmap.txt
+/usr/share/fern-wifi-cracker/extras/wordlists:fern-wifi
+/usr/share/john/password.lst:john.lst
+/usr/share/legion/wordlists:legion
+/usr/share/metasploit-framework/data/wordlists:metasploit
+/usr/share/nmap/nselib/data/passwords.lst:nmap.lst
+/usr/share/seclists:seclists
+/usr/share/set/src/fasttrack/wordlist.txt:fasttrack.txt
+/usr/share/wfuzz/wordlist:wfuzz
+/usr/share/sqlmap/data/txt/wordlist.tx_:
+" # END WORDLIST_SYMLINKS
+
+## Remove the directory symlinks made by postinst
+for symlink in $WORDLIST_SYMLINKS; do
+  link="/usr/share/wordlists/$(echo "$symlink" | cut -d ':' -f 2)"
+  [ -h "${link}" ] \
+    && rm -f "${link}"
+done
+
+
+## Remove the file symlinks made by postinst
+[ -h /usr/share/wordlists/sqlmap.txt ] \
+  && rm -f /usr/share/wordlists/sqlmap.txt
+
+
+# Remove extracted rockyou.txt
+[ "$1" = "remove" ] \
+  && rm -f /usr/share/wordlists/rockyou.txt
+
+exit 0
+
+#DEBHELPER#
