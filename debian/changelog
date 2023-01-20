@@ -1,3 +1,10 @@
+wordlists (2023.1.1) kali-dev; urgency=medium
+
+  * Improve scripts to handle symlink updates
+  * Add README.md
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Fri, 20 Jan 2023 09:12:04 +0100
+
 wordlists (2023.1.0) kali-dev; urgency=medium
 
   [ Steev Klimaszewski ]
