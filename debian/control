@@ -6,7 +6,7 @@ Uploaders:
  Ben Wilson <g0tmi1k@kali.org>,
 Build-Depends:
  debhelper-compat (= 13),
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Homepage: https://www.kali.org
 Vcs-Git: https://gitlab.com/kalilinux/packages/wordlists.git
 Vcs-Browser: https://gitlab.com/kalilinux/packages/wordlists
