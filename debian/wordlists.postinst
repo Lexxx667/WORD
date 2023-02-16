@@ -33,7 +33,7 @@ done
 
 
 [ -e /usr/share/sqlmap/data/txt/wordlist.tx_ ] \
-  && unzip -o -d /usr/share/sqlmap/data/txt/ /usr/share/sqlmap/data/txt/wordlist.tx_ 2>0 \
+  && unzip -qq -o -d /usr/share/sqlmap/data/txt/ /usr/share/sqlmap/data/txt/wordlist.tx_ \
   && ln -sf /usr/share/sqlmap/data/txt/wordlist.txt /usr/share/wordlists/sqlmap.txt
 
 exit 0
