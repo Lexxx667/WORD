@@ -8,7 +8,7 @@ if ! [ -f /usr/share/wordlists/rockyou.txt ]; then
   echo
   read -p "Do you want to extract the wordlist rockyou.txt? [Y/n] " confirm
   case $confirm in Y|y|"")
-    sudo gunzip -k /usr/share/wordlists/rockyou.txt.gz
+    sudo unxz -k /usr/share/wordlists/rockyou.txt.xz
     ;;
   esac
   echo
