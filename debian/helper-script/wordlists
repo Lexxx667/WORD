@@ -11,9 +11,9 @@ if ! [ -f /usr/share/wordlists/rockyou.txt ]; then
         echo "Extracting rockyou.txt.gz..."
         #check if user is root
         if [ "$(id -u)" -ne 0 ]; then
-            gunzip -k /usr/share/wordlists/rockyou.txt.gz
+            sudo gunzip -k /usr/share/wordlists/rockyou.txt.gz
         else
-            sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+            gunzip -k /usr/share/wordlists/rockyou.txt.gz
         fi
         ;;
 
