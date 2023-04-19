@@ -3,14 +3,21 @@
 set -e
 
 if ! [ -f /usr/share/wordlists/rockyou.txt ]; then
-  # Show content without new shell + cd
-  SHELL=/bin/true kali-treecd "/usr/share/wordlists" "wordlists" 1 false
-  echo
-  read -p "Do you want to extract the wordlist rockyou.txt? [Y/n] " confirm
-  case $confirm in Y|y|"")
-    sudo gunzip -k /usr/share/wordlists/rockyou.txt.gz
-    ;;
-  esac
-  echo
+    # Show content without new shell + cd
+    SHELL=/bin/true kali-treecd "/usr/share/wordlists" "wordlists" 1 false
+    echo
+    read -p "Do you want to extract the wordlist rockyou.txt? [Y/n] " confirm
+    case $confirm in Y | y | "")
+        echo "Extracting rockyou.txt.gz..."
+        #check if user is root
+        if [ "$(id -u)" -ne 0 ]; then
+            gunzip -k /usr/share/wordlists/rockyou.txt.gz
+        else
+            sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+        fi
+        ;;
+
+    esac
+    echo
 fi
 kali-treecd "/usr/share/wordlists" "wordlists" 1 false
