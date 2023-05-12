@@ -1,3 +1,10 @@
+wordlists (2023.2.0) kali-dev; urgency=medium
+
+  * No need to check if the user is root
+  * Recover extraction message
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Fri, 12 May 2023 17:14:27 +0200
+
 wordlists (2023.1.3) kali-dev; urgency=medium
 
   [ Ervis Tusha"/qqq ]
